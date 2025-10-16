@@ -1,3 +1,19 @@
+/*
+==================================================================================================
+Stored Procedure: Takes the Data from Bronze layer, cleans it and inserts it into the Silver Layer 
+==================================================================================================
+
+Script Purpose:
+  This is a stored procedure that gets data from the tables in the bronze layer and performs necessary transformations to clean the data.
+  It then loads the cleaned data into the corresponding silver layer tables.
+
+Parameters:
+  None
+
+Usage Example:
+  EXEC silver.load_silver
+ 
+*/
 CREATE OR ALTER PROCEDURE silver.load_silver AS
 BEGIN
 	DECLARE @start_time DATETIME, @end_time DATETIME, @start_time_global DATETIME, @end_time_global DATETIME;
